@@ -1,0 +1,7 @@
+mapnik/mapnik/*
+!mapnik/mapnik/test/**/script_runs.cpp
+
+mapnik/mod_tile
+openstreetmap-carto/**
+**/osm-data/**
+**/tilecache/**
