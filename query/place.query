@@ -1,0 +1,12 @@
+[out:{{out_format}}][timeout:{{timeout}}];
+(
+	node[place={{place}}];
+	way[place={{place}}];
+	rel[place={{place}}];
+);
+out body qt;
+<; // Recurse up to get ways from nodes and rels from ways
+out body qt;
+>; // Recurse down to get new nodes and ways
+out body qt;
+

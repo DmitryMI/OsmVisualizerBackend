@@ -1,0 +1,9 @@
+[out:{{out_format}}][timeout:{{timeout}}];
+(
+  way[highway='{{highway}}'];
+  relation[highway='{{highway}}'];
+);
+>;
+out body qt;
+
+
