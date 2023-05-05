@@ -1,4 +1,4 @@
-[out:{{out_format}}][timeout:{{timeout}}];
+[out:{{out_format}}][timeout:{{timeout}}][maxsize:{{maxsize}}];
 (
   way[highway='{{highway}}'];
   relation[highway='{{highway}}'];
