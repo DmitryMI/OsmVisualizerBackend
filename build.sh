@@ -1,14 +1,6 @@
 #!/bin/bash
 
 osm_data=$(realpath ./postgis/osm-data)
-wd=$(pwd)
-if [ ! -d $osm_data ]
-then
-    mkdir -p $osm_data
-    cd $osm_data
-    wget https://download.geofabrik.de/asia/azerbaijan-latest.osm.pbf
-    cd $wd
-fi
 
 cd ./postgis
 ./build.sh
