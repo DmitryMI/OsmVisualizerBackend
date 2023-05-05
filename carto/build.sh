@@ -12,7 +12,7 @@ fi
 echo "Running Carto..."
 osm_data=$(realpath ../osm-data)
 carto=$(realpath ../openstreetmap-carto)
-# docker run -it --name carto-container --network=host --volume $carto:/openstreetmap-carto --volume $osm_data:/osm-data carto-image /container-init/generate-mapnik-style.sh
+docker run -it --name carto-container --network=host --volume $carto:/openstreetmap-carto --volume $osm_data:/osm-data carto-image /container-init/generate-mapnik-style.sh
 
 echo "Stopping Carto"
 # docker stop carto-container

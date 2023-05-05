@@ -1,8 +1,22 @@
 #!/bin/bash
 
-cd /osm-data
+# Rebuilding not needed! Script is inside a volume.
 
-/openstreetmap-carto/scripts/get-external-data.py -U postgres --password postgres --host localhost --port 5432
+set -e
+
+cd /openstreetmap-carto
+
+./scripts/get-external-data.py -U postgres --password postgres --host localhost --port 5432
+
+if [ ! -d ./fonts ]
+then
+    mkdir -p ./fonts
+    ./scripts/get-fonts.sh
+else
+    echo "fonts seem to be already downloaded. Delete $(pwd)/fonts to reload the fonts."
+fi
+
+cd /osm-data
 
 for FILE in *;
 do 

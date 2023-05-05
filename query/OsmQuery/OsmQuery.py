@@ -234,11 +234,11 @@ def main():
 
     parser.add_argument("config_dir")
     parser.add_argument("-o", "--output_dir", required=False, default="./")
-    parser.add_argument("-z", "--zoom", required=False, default=5)
+    parser.add_argument("-z", "--zoom", required=False, default=5, type=int)
     parser.add_argument("--endpoint", required=False, default="https://lz4.overpass-api.de/api/interpreter")
     parser.add_argument("--timeout", required=False, default=3600, type=int)
     parser.add_argument("--maxsize", required=False, default=2000000000, type=int)
-    parser.add_argument("--format", required=False, default="json")
+    parser.add_argument("--format", required=False, default="xml")
     parser.add_argument("--write_const_param_names", required=False, default=False)
     parser.add_argument("-e", "--stop_on_error", required=False, default=False)
 

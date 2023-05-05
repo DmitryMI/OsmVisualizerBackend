@@ -20,7 +20,7 @@ then
     git clone https://github.com/gravitystorm/openstreetmap-carto
 fi
 
-carto=$(realpath ./carto/openstreetmap-carto)
+carto=$(realpath ./openstreetmap-carto)
 postgis_scripts=$(realpath ./postgis/scripts)
 echo "Starting PostGis in detached mode on port 5432..."
 
@@ -45,6 +45,6 @@ cd ./mapnik
 ./build.sh
 if [ $? != 0 ]; then exit 1; fi
 
-echo "Stopping PostGis"
-docker stop postgis-container
+#echo "Stopping PostGis"
+#docker stop postgis-container
 
