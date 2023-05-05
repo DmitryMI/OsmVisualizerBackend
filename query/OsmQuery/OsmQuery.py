@@ -1,9 +1,10 @@
+#!/usr/bin/python3
+
 import argparse
 from email.policy import default
 import requests
 import os.path
 from PString import PString
-import itertools
 
 CSV_SEPARATOR = ","
 
