@@ -1,9 +1,11 @@
 [out:{{out_format}}][timeout:{{timeout}}][maxsize:{{maxsize}}];
 (
-  way[highway='{{highway}}'];
-  relation[highway='{{highway}}'];
+    node[highway='{{highway}}'];
+    way[highway='{{highway}}'];
+    relation[highway='{{highway}}'];
 );
->;
-out body qt;
+
+(._; >;);
+out body;
 
 

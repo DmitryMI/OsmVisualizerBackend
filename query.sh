@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./query/OsmQuery/OsmQuery.py ./query/ -o ./postgis/osm-data --zoom 5
+./query/OsmQuery/OsmQuery.py ./query/ -o ./postgis/osm-data --zoom 3

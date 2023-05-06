@@ -38,13 +38,11 @@ RUN apt-get install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted
 RUN apt install -y apache2
 RUN apt install -y libapache2-mod-tile renderd
 
-RUN echo "LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so" > /etc/apache2/mods-available/mod_tile.load
+# RUN echo "LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so" > /etc/apache2/mods-available/mod_tile.load
 
-RUN ln -s /etc/apache2/mods-available/mod_tile.load /etc/apache2/mods-enabled/
+# RUN ln -s /etc/apache2/mods-available/mod_tile.load /etc/apache2/mods-enabled/
 
 COPY ./mod_tile/etc/renderd/renderd.conf /etc/renderd.conf
-# COPY ./mod_tile/etc/apache2/renderd.conf /etc/apache2/conf-available/renderd.conf
 COPY ./mod_tile/etc/apache2/renderd-example-map.conf /etc/apache2/conf-available/renderd-example-map.conf
-# COPY ./mod_tile/etc/apache2/renderd-example-map.conf /etc/apache2/conf-available/renderd-example-map.conf
 
 COPY ./mod_tile/utils/example-map /var/www/example-map

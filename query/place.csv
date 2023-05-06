@@ -1,9 +1,9 @@
 place,zoom
 country,0
-state,3
-region,5
-province,5
-district,5
+state,4
+region,6
+province,6
+district,6
 county,5
 municipality,5
 city,3
@@ -13,7 +13,7 @@ quarter,12
 neighbourhood,12
 city_block,12
 plot,12
-town,5
+town,6
 village,7
 hamlet,7
 isolated_dwelling,9
