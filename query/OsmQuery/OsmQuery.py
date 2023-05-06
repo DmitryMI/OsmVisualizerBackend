@@ -115,8 +115,9 @@ def get_all_combinations(key_values_in):
 
     key_values = {}
     for key, values in key_values_in.items():
-        if values:
-            key_values[key] = values
+        if not values:
+            return []
+        key_values[key] = values
 
     combinations = []
     combinations_num = 1
